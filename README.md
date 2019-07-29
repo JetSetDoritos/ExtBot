@@ -4,7 +4,7 @@
 
 A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.
 
-This has been tested in a group thats over 5 years old with more than 100 partitipants and 250k messages.
+This has been tested in a group with over 250k messages.
 
 ## **Setup**
 
@@ -81,3 +81,4 @@ __refresh_days__ : the bot refreshes messages every hour, this is the amount of 
 
 ## **Adding Functions**
 
+I'll document how to add your own functionality later
