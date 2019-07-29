@@ -4,31 +4,44 @@
 
 A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.
 
+This has been tested in a group thats over 5 years old with more than 100 partitipants and 250k messages.
+
 ## **Setup**
 
-TODO: 
-Fill out the config file
-Run buildMessages.py
-Run run.py
+1. In the data folder, create a copy or rename the example config file to config.json
+
+2. Sign into dev.groupme.com with your GroupMe account
+
+3. In the "Bots" tab create a bot in your group, set your callback url with the IP:port you will be hosting the bot on, also a name and optional photo
+
+4. Copy the Bot ID and Group ID into the config file, also set the listening port
+
+5. At the top of the dev.groupme.com page click "Access Token" and copy it to the config file
+
+6. Run rebuild_database.py to create the local database of your groups messages (this may take some time! downloading 250k messages takes around 30 minutes!)
+
+7. Edit the config file as you see fit, though the default settings are what worked best in my group.
+
+8. Run run.py to start the bot :)
 
 ## **Config File**
-bot_id : Your bot id from dev.groupme.com bots tab
+__bot_id__ : Your bot id from dev.groupme.com bots tab
 
-listening_port : The port you are hosting the bot on
+__listening_port__ : The port you are hosting the bot on
 
-api_key : your api key from dev.groupme.com applications tab
+__api_key__ : your api key from dev.groupme.com
 
-group_id : the group id the bot is in from dev.groupme.com bots tab
+__group_id__ : the group id the bot is in from dev.groupme.com bots tab
 
-disable_image : enable/disable the !image function
+__disable_image__ : enable/disable the !image function
 
-like_threshold : when !image is ran, this is the minimim number for the image it picks
+__like_threshold__ : when !image is ran, this is the minimim number for the image it picks
 
-year_like_threshold : when !image [year] is ran, this is the minimim number for the image it picks
+__year_like_threshold__ : when !image [year] is ran, this is the minimim number for the image it picks
 
-limit_image : limit !image to one per day per user (this prevents so much spam)
+__limit_image__ : limit !image to one per day per user (this prevents so much spam)
 
-refresh_days : the bot refreshes messages every hour, this is the amount of days back it checks,refreshing too many messages can use a lot of API calls and take much longer, though there is no documented API limit my calls started failing around ~2,500 within one hour, this days limit reduces the API calls to less than a dozen per hour usually
+__refresh_days__ : the bot refreshes messages every hour, this is the amount of days back it checks,refreshing too many messages can use a lot of API calls and take much longer, though there is no documented API limit my calls started failing around ~2,500 within one hour, this days limit reduces the API calls to less than a dozen per hour usually
 
 ## **Bot Usage**
 
