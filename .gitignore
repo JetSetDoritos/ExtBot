@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+/.vscode
+/data/log.txt
+/data/exdatabase.sqlite3
+/data/config.json

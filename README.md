@@ -26,6 +26,8 @@ This project was possible by [Chomps Bot](https://github.com/noeltrivedi/beer_po
 
 8. Run run.py to start the bot :)
 
+NOTE: you make need to rerun rebuild_database every once in a great while, messages older than the "refresh_days" will not be seen, but this should be very marginal.
+
 ## **Config File**
 __bot_id__ : Your bot id from dev.groupme.com bots tab
 
