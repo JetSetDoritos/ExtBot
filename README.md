@@ -60,23 +60,23 @@ __refresh_days__ : the bot refreshes messages every hour, this is the amount of 
 
 **!info**
 
-<img src="../image_hosting/example_images/info_example.png?raw=true" width="500">
+<img src="../readme_images/example_images/info_example.png?raw=true" width="500">
 
 **!likes**
 
-<img src="../image_hosting/example_images/likes_example.png?raw=true" width="500">
+<img src="../readme_images/example_images/likes_example.png?raw=true" width="500">
 
 **!rank**
 
-<img src="../image_hosting/example_images/rank_example.png?raw=true" width="500">
+<img src="../readme_images/example_images/rank_example.png?raw=true" width="500">
 
 **!kicks**
 
-<img src="../image_hosting/example_images/kicks_example.png?raw=true" width="500">
+<img src="../readme_images/example_images/kicks_example.png?raw=true" width="500">
 
 **!image**
 
-<img src="../image_hosting/example_images/image_example.png?raw=true" width="500">
+<img src="../readme_images/example_images/image_example.png?raw=true" width="500">
 
 
 ## **Adding Functions**
