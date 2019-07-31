@@ -6,6 +6,8 @@ A GroupMe bot written in Python that uses GroupMe's REST API to provide like and
 
 This has been tested in a group with over 250k messages.
 
+This project was possible by [Chomps Bot](https://github.com/noeltrivedi/beer_pong_bot) and [GroupMe Analytics](https://github.com/octohub/GroupMeAnalytics), which were used to learn GroupMe's bot and application APIs accordingly.
+
 ## **Setup**
 
 1. In the data folder, create a copy or rename the example config file to config.json
