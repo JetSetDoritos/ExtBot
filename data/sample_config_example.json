@@ -1,0 +1,14 @@
+{
+    "bot_id" : "",
+    "listening_port" : 4005,
+
+    "api_key" : "",
+    "group_id" : "",
+
+    "disable_image" : false,
+    "like_threshold" : 4,
+    "year_like_threshold" : 2,
+    "limit_image" : true,
+    
+    "refresh_days" : 30
+}
