@@ -4,6 +4,8 @@
 
 A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.  Only image/video URLs are saved rather than the actual media to use minimal space.  Ext is short for Extras :)
 
+This has only been tested in Python 3.7
+
 ## **Features**
 
 * Return Like and Kick data for users
