@@ -10,6 +10,8 @@ This project was possible by [Chomps Bot](https://github.com/noeltrivedi/beer_po
 
 ## **Setup**
 
+0. Install required python libraries in requirements.txt (schedule, requests)
+
 1. In the data folder, create a copy or rename the example config file to config.json
 
 2. Sign into dev.groupme.com with your GroupMe account
