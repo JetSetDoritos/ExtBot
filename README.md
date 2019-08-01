@@ -2,7 +2,7 @@
 
 ## **Description**
 
-A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.
+A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.  Only image URLs are saved to use minimal space.
 
 This has been tested in a group with over 250k messages.
 
@@ -84,6 +84,9 @@ __refresh_days__ : the bot refreshes messages every hour, this is the amount of 
 
 <img src="../readme_images/example_images/image_example.png?raw=true" width="500">
 
+## **Other Notes**
+
+* You can not DM bots, but GroupMe has a sort of bug in its app (possibly just on Android).  If you view an image posted by a bot, you are able to tap the profile and there is an option to DM the bot or add to another group.  This actually just DMs or adds a user with the same user ID as the bot's ID.
 
 ## **Adding Functions**
 
