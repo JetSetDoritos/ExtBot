@@ -2,11 +2,11 @@
 
 ## **Description**
 
-A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.  Only image URLs are saved to use minimal space.
+A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.  Only image/video URLs are saved rather than the actual media to use minimal space.  Ext is short for Extras :)
 
 This has been tested in a group with over 250k messages.
 
-This project was possible by [Chomps Bot](https://github.com/noeltrivedi/beer_pong_bot) and [GroupMe Analytics](https://github.com/octohub/GroupMeAnalytics), which were used to learn GroupMe's bot and application APIs accordingly.
+This project was made possible by [Chomps Bot](https://github.com/noeltrivedi/beer_pong_bot) and [GroupMe Analytics](https://github.com/octohub/GroupMeAnalytics), which were used to learn GroupMe's bot and application APIs accordingly.
 
 ## **Setup**
 
