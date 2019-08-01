@@ -4,9 +4,14 @@
 
 A GroupMe bot written in Python that uses GroupMe's REST API to provide like and kick stats, as well as posting random images.  Messages are stored using SQLite.  Only image/video URLs are saved rather than the actual media to use minimal space.  Ext is short for Extras :)
 
-This has been tested in a group 7 year old group with over 100 partitipants and over 250k messages.
+## **Features**
 
-This project was made possible by [Chomps Bot](https://github.com/noeltrivedi/beer_pong_bot) and [GroupMe Analytics](https://github.com/octohub/GroupMeAnalytics), which were used to learn GroupMe's bot and application APIs accordingly.
+* Return Like and Kick data for users
+* Rank users in order of likes and return a leaderboard
+* Return a random image previously posted, either from all time or specific year
+* Return group metadata such as total messages, group creator, and date created
+* Hourly refresh of message data
+* Tested in a 7 year old group with over 100 partitipants and over 250k messages.
 
 ## **Setup**
 
@@ -87,6 +92,8 @@ __refresh_days__ : the bot refreshes messages every hour, this is the amount of 
 ## **Other Notes**
 
 * You can not DM bots, but GroupMe has a sort of bug in its app (possibly just on Android).  If you view an image posted by a bot, you are able to tap the profile and there is an option to DM the bot or add to another group.  This actually just DMs or adds a user with the same user ID as the bot's ID.
+
+* This project was made possible by [Chomps Bot](https://github.com/noeltrivedi/beer_pong_bot) and [GroupMe Analytics](https://github.com/octohub/GroupMeAnalytics), which were used to learn GroupMe's bot and application APIs accordingly.
 
 ## **Adding Functions**
 
