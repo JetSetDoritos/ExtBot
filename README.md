@@ -48,9 +48,9 @@ __group_id__ : the group id the bot is in from dev.groupme.com bots tab
 
 __disable_image__ : enable/disable the !image function
 
-__like_threshold__ : when !image is ran, this is the minimim number for the image it picks
+__like_threshold__ : when !image is ran, this is the minimim number of likes for the image it picks
 
-__year_like_threshold__ : when !image [year] is ran, this is the minimim number for the image it picks
+__year_like_threshold__ : when !image [year] is ran, this is the minimim number of likes for the image it picks
 
 __limit_image__ : limit !image to one per day per user (this prevents so much spam)
 
