@@ -1,9 +1,9 @@
 {
-    "bot_id" : "",
+    "bot_id" : "2fc5dfa5f539b761f5dc2545cb",
     "listening_port" : 4005,
 
-    "api_key" : "",
-    "group_id" : "",
+    "api_key" : "KYmHUIrtKf7SzGXbO73xHdgofuwYu8LJXsk5v6KU",
+    "group_id" : "44988077",
 
     "disable_image" : false,
     "like_threshold" : 4,
