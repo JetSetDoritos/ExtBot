@@ -78,7 +78,6 @@ class MessagesCollector():
         #this line can probably be removed
         #cursor.execute("SELECT name FROM sqlite_master WHERE type='table';")
         db.commit()
-        print(cursor.fetchall())
 
 
         #gets group data, puts group members in users table
@@ -100,7 +99,6 @@ class MessagesCollector():
             timegap = time.time() - (86400 * days_back)
             cursor.execute('''SELECT
                                 id,
-                                sequence,
                                 created_at
                               FROM
                                 messages
@@ -110,12 +108,10 @@ class MessagesCollector():
                             ''' , (timegap,)
             )
             continue_to = cursor.fetchone()
-            print("continue: "+ str(continue_to))
             ending_message = continue_to[0]
         else:
             cursor.execute('''SELECT
                                 id,
-                                sequence,
                                 created_at
                               FROM
                                 messages
@@ -125,9 +121,10 @@ class MessagesCollector():
                             '''
             )
             continue_to = cursor.fetchone()
-            print("continue: "+ str(continue_to))
-            ending_message = continue_to[0]
-
+            if(continue_to != None):
+                ending_message = continue_to[0]
+            else:
+                ending_message = 0
 
         #while the current message is less than the desired message, request 100 messages at a time to update in the database
         while 1:
@@ -183,6 +180,8 @@ class MessagesCollector():
                     return
             db.commit()
             message_id = messages[-1]['id']
+            if(len(messages) < 100):
+                break
 
     #returns group info like total messages, date created, and other non-sensitive config file info
     def get_group_info_message(self):
@@ -191,11 +190,18 @@ class MessagesCollector():
         return_string = "[Group Information]\n"
         return_string += "Total messages: " + str(currentgroup['messages']['count']) + "\n"
         return_string += "Date created: " + str(datetime.datetime.utcfromtimestamp(currentgroup['created_at']).strftime('%m-%d-%Y | %H:%M:%S UTC')) + "\n"
-        return_string += "Created by: " + self.string_name(currentgroup['creator_user_id']) + "\n"
+        try:
+            return_string += "Created by: " + self.string_name(currentgroup['creator_user_id']) + "\n"
+        except:
+            return_string += "Created by: UNAVAILABLE ON INITIAL BUILD" + "\n"
         return_string += "Min likes for !image: " + str(self.like_threshold) + "\n" 
         return_string += "Min likes for year !image: " + str(self.year_like_threshold) + "\n"
         return return_string
 
+    def get_total_messages(self):
+        response = requests.get('https://api.groupme.com/v3/groups/' + self.group_id + '?token='+ self.api_key)
+        currentgroup = response.json()['response']
+        return int(currentgroup['messages']['count'])
         
     #processes the database to calculate likes for each user
     def get_likes(self):
