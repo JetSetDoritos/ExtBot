@@ -5,7 +5,10 @@ import os
 m_c = MessagesCollector()
 
 curr_db = os.path.join('data','exdatabase.sqlite3')
-os.remove(curr_db)
+try:
+  os.remove(curr_db)
+except:
+  pass
 
 print("Working with Group:")
 print(m_c.get_group_info_message())
